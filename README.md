@@ -2,7 +2,7 @@
 
 Creators: Vova Arsen Goha Beiba Alish Sanshar
 
-1. Guest Management:
+# 1. Guest Management:
 
   Guest class: Represents a guest with attributes like serial number, full name, bank account balance, a list of reservations, and a list of available rooms.
   Methods:
@@ -10,13 +10,13 @@ Creators: Vova Arsen Goha Beiba Alish Sanshar
     cancelReservation(reservation): Removes a reservation from the guest's list and marks the room as available.
     selectRoom(type): Searches for an available room of the specified type.
     Getter and setter methods for guest information.
-2. Room Management:
+# 2. Room Management:
 
   Room class: Represents a room with attributes like room number, type (e.g., economy, comfort, luxury), and availability status.
   Methods:
     Getter and setter methods for room information.
     setAvailable(boolean available): Updates the room's availability status.
-3. Reservation Management:
+# 3. Reservation Management:
 
   Reservation class: Represents a reservation with details like reservation ID, guest, room, start date, and end date.
   ReservationManager class: Manages a list of reservations in memory and interacts with the database connector (simulated in this code).
@@ -26,15 +26,15 @@ Creators: Vova Arsen Goha Beiba Alish Sanshar
     getReservationsForGuest(guest): Retrieves all reservations for a specific guest.
     getReservationsForRoom(room): Retrieves all reservations for a specific room.
     getReservationsForDateRange(startDate, endDate): Retrieves all reservations within a date range.
-4. Database Interaction (Simulated):
+# 4. Database Interaction (Simulated):
 
   DatabaseConnector class: This class is a placeholder for actual database interaction. It currently has methods for saving and deleting reservations, but their implementation is not provided.
   
-5. Room Selection Interface:
+# 5. Room Selection Interface:
 
   RoomSelectionInterface: Defines a single method selectRoom(type) that guests can use to find an available room of a specific type.
   
-6. Room Type Enumeration:
+# 6. Room Type Enumeration:
 
   RoomType enum: Defines different room types (economy, comfort, luxury) with their corresponding prices.
   Overall Workflow:
