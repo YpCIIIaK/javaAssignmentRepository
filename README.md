@@ -1,6 +1,7 @@
 # Hotel Reservation System
 
-Creators: Vova Arsen Goha Beiba Alish Sanshar
+### Creators: Vladimirov Vladimir, Tinalin Arsen, Sabyraly Gaukharbek, Abishev Beibarys, Alish, Sanshar
+### Group: SE - 2329
 
 # 1. Guest Management:
 
