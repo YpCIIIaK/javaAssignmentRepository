@@ -1,2 +1,4 @@
-# javaAssignmentRepository
-Vova Arsen Goha Beiba Alish Sanshar
+# Hotel Reservation System
+
+Creators: Vova Arsen Goha Beiba Alish Sanshar
+
