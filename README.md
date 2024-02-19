@@ -39,10 +39,10 @@ Creators: Vova Arsen Goha Beiba Alish Sanshar
   RoomType enum: Defines different room types (economy, comfort, luxury) with their corresponding prices.
   Overall Workflow:
 
-  Guest creation: Guests are created with their details.
-  Room creation: Rooms are created with their types and set as available.
-  Reservation making: Guests can make reservations by selecting an available room of their desired type. The selected room is marked as unavailable after reservation.
-  Reservation cancellation: Guests can cancel their reservations, making the room available again.
-  Reservation management: The ReservationManager keeps track of reservations in memory and provides methods to retrieve them based on various criteria.
+ - Guest creation: Guests are created with their details.
+ - Room creation: Rooms are created with their types and set as available.
+ - Reservation making: Guests can make reservations by selecting an available room of their desired type. The selected room is marked as unavailable after reservation.
+ - Reservation cancellation: Guests can cancel their reservations, making the room available again.
+ - Reservation management: The ReservationManager keeps track of reservations in memory and provides methods to retrieve them based on various criteria.
   
 
