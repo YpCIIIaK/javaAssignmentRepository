@@ -81,3 +81,9 @@
   - Database connection error.
     
   ## In such cases, the user is presented with an appropriate error message.
+
+
+
+# Database interaction:
+  The code uses JDBC to connect to a PostgreSQL database.
+  Reservation data is stored in tables in the database.
