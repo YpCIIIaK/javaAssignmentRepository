@@ -70,3 +70,14 @@
   
   - Stop the program.
   
+
+
+# Error handling
+
+  ## The program handles errors that may occur during operation, such as:
+  
+  - Insufficient funds.
+  - Room not available.
+  - Database connection error.
+    
+  ## In such cases, the user is presented with an appropriate error message.
