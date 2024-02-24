@@ -14,48 +14,41 @@
   - Users can also view available rooms and exit the program.
 
 
+# Classes
 
-# 1. Guest Management:
+## Customer:
 
-  Guest class: Represents a guest with attributes like serial number, full name, bank account balance, a list of reservations, and a list of available rooms.
-  Methods:
-   - makeReservation(reservation): Adds a reservation to the guest's list and marks the room as unavailable.
-   - cancelReservation(reservation): Removes a reservation from the guest's list and marks the room as available.
-   - selectRoom(type): Searches for an available room of the specified type.
-   - Getter and setter methods for guest information.
-# 2. Room Management:
+  - Represents a customer with attributes like serial number, name, and bank account.
+  - Used to validate customer information during reservation.
 
-  Room class: Represents a room with attributes like room number, type (e.g., economy, comfort, luxury), and availability status.
-  Methods:
-   - Getter and setter methods for room information.
-   - setAvailable(boolean available): Updates the room's availability status.
-# 3. Reservation Management:
+## Room:
 
-  Reservation class: Represents a reservation with details like reservation ID, guest, room, start date, and end date.
-  ReservationManager class: Manages a list of reservations in memory and interacts with the database connector (simulated in this code).
-  Methods:
-   - makeReservation(reservation): Adds a reservation to the internal list and calls the DatabaseConnector to save it (not implemented).
-   - cancelReservation(reservation): Removes a reservation from the internal list and calls the DatabaseConnector to delete it (not implemented).
-   - getReservationsForGuest(guest): Retrieves all reservations for a specific guest.
-   - getReservationsForRoom(room): Retrieves all reservations for a specific room.
-   - getReservationsForDateRange(startDate, endDate): Retrieves all reservations within a date range.
-# 4. Database Interaction (Simulated):
+  - Represents a room in the hotel with attributes like number, type (e.g., single, double), price, and availability status.
+  - Used to display available rooms and check their availability during reservation.
 
-  DatabaseConnector class: This class is a placeholder for actual database interaction. It currently has methods for saving and deleting reservations, but their implementation is not provided.
-  
-# 5. Room Selection Interface:
+## Reservation:
 
-  RoomSelectionInterface: Defines a single method selectRoom(type) that guests can use to find an available room of a specific type.
-  
-# 6. Room Type Enumeration:
+  - Represents a reservation made by a customer for a specific room and duration.
+  - Used to manage the list of reservations.
 
-  RoomType enum: Defines different room types (economy, comfort, luxury) with their corresponding prices.
-  Overall Workflow:
+## ReservationManager:
 
-   - Guest creation: Guests are created with their details.
-   - Room creation: Rooms are created with their types and set as available.
-   - Reservation making: Guests can make reservations by selecting an available room of their desired type. The selected room is marked as unavailable after reservation.
-   - Reservation cancellation: Guests can cancel their reservations, making the room available again.
-   - Reservation management: The ReservationManager keeps track of reservations in memory and provides methods to retrieve them based on various criteria.
-  
+  - Manages reservations by adding, removing, and editing them.
+  - Checks room availability and processes payments (not implemented in this example).
+  - Interacts with the database to store reservation information.
+
+## Hotel:
+
+  - Represents the hotel, its name, and list of rooms.
+  - Used to display hotel information.
+
+## Main:
+
+  - Launches the program and provides an interface for user interaction.
+  - Allows users to make reservations, view available rooms, and exit the system.
+
+## DatabaseConnection:
+
+  - Provides a connection to the database where reservation information is stored.
+
 
