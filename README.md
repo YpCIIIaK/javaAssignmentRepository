@@ -4,6 +4,17 @@
 
 ### Group: SE - 2329
 
+# Overall functionality:
+
+  - The program initializes a hotel with rooms and a reservation manager.
+  - Users can interact with the system through a menu-driven interface.
+  - They can make reservations by providing their information and choosing a room and duration.
+  - The reservation manager checks room availability, customer funds (not implemented in this example), and performs other validations.
+  - If everything is valid, a reservation is created and stored in the database.
+  - Users can also view available rooms and exit the program.
+
+
+
 # 1. Guest Management:
 
   Guest class: Represents a guest with attributes like serial number, full name, bank account balance, a list of reservations, and a list of available rooms.
