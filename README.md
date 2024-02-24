@@ -54,16 +54,19 @@
 
 # What happens after code initialization?
 
-  The user is presented with a menu:
+  ## The user is presented with a menu:
   
-  Make a reservation:
-    - Enter information about yourself and the desired room.
-    - The system will check availability, validity, and payment capability.
-    - If everything is ok, it will create a reservation and save it to the database.
+  ## Make a reservation:
+  
+  - Enter information about yourself and the desired room.
+  - The system will check availability, validity, and payment capability.
+  - If everything is ok, it will create a reservation and save it to the database.
     
-  View available rooms:
-    - The system will show a list of available rooms.
+  ## View available rooms:
+  
+  - The system will show a list of available rooms.
     
-  Exit:
-    - Stop the program.
+  ## Exit:
+  
+  - Stop the program.
   
