@@ -43,10 +43,16 @@
 ## 3. Observer Classes (CostPerNightLabelObserver, ResultTextAreaObserver, RoomAvailabilityObserver)
 
   Common Interface: They all implement the Observer interface, providing the update(String message) method.
-  Specific Actions: Each observer reacts differently to updates:
-  CostPerNightLabelObserver: Updates a label to display the cost per night based on selected room type and occupancy.
-  ResultTextAreaObserver: Updates a text area with a success message when a reservation is submitted.
-  RoomAvailabilityObserver: Updates a text area to display which rooms have become available or unavailable.
+  
+  Specific Actions: 
+    Each observer reacts differently to updates:
+
+  - CostPerNightLabelObserver: Updates a label to display the cost per night based on selected room type and occupancy.
+      
+  - ResultTextAreaObserver: Updates a text area with a success message when a reservation is submitted.
+      
+  - RoomAvailabilityObserver: Updates a text area to display which rooms have become available or unavailable.
+  
   Purpose: Respond to changes notified by the RoomAvailabilitySubject, updating the user interface dynamically.
 
 
