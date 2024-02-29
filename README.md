@@ -96,3 +96,39 @@
 # Database interaction:
   The code uses JDBC to connect to a PostgreSQL database.
   Reservation data is stored in tables in the database.
+
+
+# Why observe and factory methods
+
+## Observer Pattern:
+
+### Core concept: 
+
+  - This pattern defines a one-to-many relationship between objects, where one object (subject) maintains a list of dependent objects (observers) and notifies them about changes to its state.
+
+### Implementation in the code:
+
+  - RoomAvailabilitySubject acts as the subject, managing a list of observers and notifying them about changes in room availability or reservation status.
+
+  - Classes like CostPerNightLabelObserver and RoomAvailabilityObserver act as observers, registering with the subject and updating the UI based on received notifications.
+
+### Factory Method Pattern:
+
+### Core concept:
+  - This pattern focuses on object creation. It aims to centralize the logic for creating objects of a specific type without revealing the exact implementation details of the creation process.
+
+### Not used in the provided code:
+  - While the code uses various classes like Room and Observer extensively, it doesn't demonstrate the factory method pattern. There aren't any explicit factories responsible for creating these objects. They seem to be instantiated directly as needed.
+
+### Potential Use Case for Factory Method Pattern:
+
+  - Instead of directly creating Observer objects, the system could potentially benefit from a factory approach:
+
+### ObserverFactory class:
+ - This factory could be responsible for creating different types of observers based on their functionalities.
+
+### Benefits:
+
+  - Centralized creation logic: Makes it easier to manage different observer types and potentially introduce new ones without modifying other parts of the code.
+  - Encapsulation: Hides the internal implementation details of how observers are created, promoting better separation of concerns.
+  
