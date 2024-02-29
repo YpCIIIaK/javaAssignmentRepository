@@ -9,7 +9,7 @@
   - ### Manages Room Data: It maintains a list of available rooms with details like type, cost, capacity, and availability status.
   - ### Tracks Reservations: It updates room availability based on reservations stored in a database (likely accessed through DatabaseConnection).
   - ### Notifies UI Updates: It utilizes the observer pattern to notify different UI components about changes in room availability or reservation status.
-  - ###Calculates Cost: It calculates the cost per night based on the selected room type and occupancy.
+  - ### Calculates Cost: It calculates the cost per night based on the selected room type and occupancy.
   - ### Provides Reservation Management: It offers functionalities to add, remove, and cancel reservations, updating the system accordingly.
 
 
