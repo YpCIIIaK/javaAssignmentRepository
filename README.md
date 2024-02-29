@@ -1,6 +1,6 @@
 # Hotel Reservation System
 
-### Creators: Vladimirov Vladimir, Tinalin Arsen, Sabyraly Gaukharbek, Abishev Beibarys, Seitkadyr Alisher, Yesbossynov Sanzhar
+### Creators:  Abishev Beibarys, Vladimirov Vladimir, Tinalin Arsen, Sabyraly Gaukharbek, Seitkadyr Alisher, Yesbossynov Sanzhar
 
 ### Group: SE - 2329
 
