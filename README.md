@@ -6,50 +6,48 @@
 
 # Overall functionality:
 
-  - The program initializes a hotel with rooms and a reservation manager.
-  - Users can interact with the system through a menu-driven interface.
-  - They can make reservations by providing their information and choosing a room and duration.
-  - The reservation manager checks room availability, customer funds (not implemented in this example), and performs other validations.
-  - If everything is valid, a reservation is created and stored in the database.
-  - Users can also view available rooms and exit the program.
+  - ### Manages Room Data: It maintains a list of available rooms with details like type, cost, capacity, and availability status.
+  - ### Tracks Reservations: It updates room availability based on reservations stored in a database (likely accessed through DatabaseConnection).
+  - ### Notifies UI Updates: It utilizes the observer pattern to notify different UI components about changes in room availability or reservation status.
+  - ###Calculates Cost: It calculates the cost per night based on the selected room type and occupancy.
+  - ### Provides Reservation Management: It offers functionalities to add, remove, and cancel reservations, updating the system accordingly.
 
 
 # Classes
 
-## Customer:
+## 1. Room
 
-  - Represents a customer with attributes like serial number, name, and bank account.
-  - Used to validate customer information during reservation.
+  Represents: A physical hotel room.
+  Properties:
+    - roomNumber: A unique identifier for the room.
+    - type: The type of room (e.g., RoomType.LUXURY, RoomType.ECONOMY).
+    - available: A boolean flag indicating if the room is currently available.
+    - capacity: The maximum number of guests the room can accommodate.
+  Purpose: Stores essential data about each room necessary for the reservation system.
 
-## Room:
+## 2. RoomAvailabilitySubject
 
-  - Represents a room in the hotel with attributes like number, type (e.g., single, double), price, and availability status.
-  - Used to display available rooms and check their availability during reservation.
+  Represents: The central manager of room availability within the system.
+  Properties:
+    - observers: A list of Observer objects that are interested in room availability updates.
+    - rooms: A list of Room objects that it manages.
+  Methods:
+    - registerObserver, removeObserver, notifyObservers: Functions to manage the list of subscribed observers.
+    - updateRoomAvailability: Used to update the availability of a set of rooms, likely after querying a database.
+    - addRoom, removeRoom: Methods to manipulate the list of managed rooms.
+    - updateAvailabilityBasedOnReservations: Checks reservation status for each room and updates availability, notifying observers.
+    - checkReservationStatusForRoom: A helper function to query the database to determine if a room is reserved.
+    - cancelReservation: Updates availability for a canceled reservation and notifies observers.
+  Purpose: The core class that keeps track of available rooms, updates availability based on reservations, and broadcasts those changes to the relevant parts of the system.
 
-## Reservation:
+## 3. Observer Classes (CostPerNightLabelObserver, ResultTextAreaObserver, RoomAvailabilityObserver)
 
-  - Represents a reservation made by a customer for a specific room and duration.
-  - Used to manage the list of reservations.
-
-## ReservationManager:
-
-  - Manages reservations by adding, removing, and editing them.
-  - Checks room availability and processes payments (not implemented in this example).
-  - Interacts with the database to store reservation information.
-
-## Hotel:
-
-  - Represents the hotel, its name, and list of rooms.
-  - Used to display hotel information.
-
-## Main:
-
-  - Launches the program and provides an interface for user interaction.
-  - Allows users to make reservations, view available rooms, and exit the system.
-
-## DatabaseConnection:
-
-  - Provides a connection to the database where reservation information is stored.
+  Common Interface: They all implement the Observer interface, providing the update(String message) method.
+  Specific Actions: Each observer reacts differently to updates:
+  CostPerNightLabelObserver: Updates a label to display the cost per night based on selected room type and occupancy.
+  ResultTextAreaObserver: Updates a text area with a success message when a reservation is submitted.
+  RoomAvailabilityObserver: Updates a text area to display which rooms have become available or unavailable.
+  Purpose: Respond to changes notified by the RoomAvailabilitySubject, updating the user interface dynamically.
 
 
 # What happens after code initialization?
