@@ -28,16 +28,21 @@
 ## 2. RoomAvailabilitySubject
 
   Represents: The central manager of room availability within the system.
+  
   Properties:
-    - observers: A list of Observer objects that are interested in room availability updates.
-    - rooms: A list of Room objects that it manages.
+  
+  - observers: A list of Observer objects that are interested in room availability updates.
+  - rooms: A list of Room objects that it manages.
+    
   Methods:
-    - registerObserver, removeObserver, notifyObservers: Functions to manage the list of subscribed observers.
-    - updateRoomAvailability: Used to update the availability of a set of rooms, likely after querying a database.
-    - addRoom, removeRoom: Methods to manipulate the list of managed rooms.
-    - updateAvailabilityBasedOnReservations: Checks reservation status for each room and updates availability, notifying observers.
-    - checkReservationStatusForRoom: A helper function to query the database to determine if a room is reserved.
-    - cancelReservation: Updates availability for a canceled reservation and notifies observers.
+  
+  - registerObserver, removeObserver, notifyObservers: Functions to manage the list of subscribed observers.
+  - updateRoomAvailability: Used to update the availability of a set of rooms, likely after querying a database.
+  - addRoom, removeRoom: Methods to manipulate the list of managed rooms.
+  - updateAvailabilityBasedOnReservations: Checks reservation status for each room and updates availability, notifying observers.
+  - checkReservationStatusForRoom: A helper function to query the database to determine if a room is reserved.
+  - cancelReservation: Updates availability for a canceled reservation and notifies observers.
+    
   Purpose: The core class that keeps track of available rooms, updates availability based on reservations, and broadcasts those changes to the relevant parts of the system.
 
 ## 3. Observer Classes (CostPerNightLabelObserver, ResultTextAreaObserver, RoomAvailabilityObserver)
