@@ -17,19 +17,22 @@
 
 ## 1. Room
 
-  Represents: A physical hotel room.
-  Properties:
+  ### Represents: 
+  - A physical hotel room.
+  ### Properties:
   - roomNumber: A unique identifier for the room.
   - type: The type of room (e.g., RoomType.LUXURY, RoomType.ECONOMY).
   - available: A boolean flag indicating if the room is currently available.
   - capacity: The maximum number of guests the room can accommodate.
-  Purpose: Stores essential data about each room necessary for the reservation system.
+  ###Purpose: Stores essential data about each room necessary for the reservation system.
 
 ## 2. RoomAvailabilitySubject
 
-  Represents: The central manager of room availability within the system.
+  ### Represents: 
   
-  Properties:
+  The central manager of room availability within the system.
+  
+   ### Properties:
   
   - observers: A list of Observer objects that are interested in room availability updates.
   - rooms: A list of Room objects that it manages.
